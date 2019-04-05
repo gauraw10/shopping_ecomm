@@ -1,40 +1,11 @@
 Shopizer (for java 1.8 +)
 -------------------
-[![last_version](https://img.shields.io/badge/last_version-v2.4.0-blue.svg?style=flat)](https://github.com/shopizer-ecommerce/shopizer/tree/2.4.0)
-[![Official site](https://img.shields.io/website-up-down-green-red/https/shields.io.svg?label=official%20site)](http://www.shopizer.com/)
-[![Docker Pulls](https://img.shields.io/docker/pulls/shopizerecomm/shopizer.svg)](https://hub.docker.com/r/shopizerecomm/shopizer)
-[![stackoverflow](https://img.shields.io/badge/shopizer-stackoverflow-orange.svg?style=flat)](http://stackoverflow.com/questions/tagged/shopizer)
--------------------
-
-Java open source e-commerce software
-
-- Shopping cart
-- Catalogue
-- Search
-- Checkout
-- Administration
-- REST API
-
-See the demo:
--------------------
-http://demo.shopizer.com:8080
-
-
-Get the code:
--------------------
-Clone the repository:
-     
-	 $ git clone git://github.com/shopizer-ecommerce/shopizer.git
-
-If this is your first time using Github, review http://help.github.com to learn the basics.
-
-You can also download the zip file containing the code from https://github.com/shopizer-ecommerce/shopizer 
 
 To build the application:
 -------------------	
 From the command line with Maven installed:
 
-	$ cd shopizer
+	$ cd shopping_ecomm
 	$ mvn clean install
 if Maven is not installed, use maven wrapper
        
@@ -87,22 +58,4 @@ password : password
 
 The instructions above will let you run the application with default settings and configurations.
 Please read the instructions on how to connect to MySQL, configure an email server and configure other subsystems
-
-
-### Documentation:
--------------------
-
-Documentation available from the wiki <http://shopizer-ecommerce.github.io/shopizer/#>
-
-ChatOps <https://shopizer.slack.com>
-
-More information is available on shopizer web site here <http://www.shopizer.com>
-
-### Participation:
--------------------
-
-If you have interest in giving feedback or for participating to Shopizer project in any way
-Feel to use the contact form <http://www.shopizer.com/contact.html> and share your email address
-so we can send an invite to our Slack channel
-
 
