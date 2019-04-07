@@ -36,10 +36,10 @@
 
 	<developers>
 		<developer>
-			<name>Shopizer Team</name>
-			<email>team@shopizer.com</email>
-			<organization>Shopizer</organization>
-			<organizationUrl>http://www.shopizer.com</organizationUrl>
+			<name>gaurav</name>
+			<email>gauraw.sterling@gmail.com</email>
+			<organization>shopping-ecomm</organization>
+			<organizationUrl>http://www.abcggggg4.com</organizationUrl>
 		</developer>
 	</developers>
 
@@ -205,9 +205,9 @@
 	</distributionManagement>
 
 	<scm>
-		<connection>scm:git:git://github.com:shopizer-ecommerce/shopizer-sm-core-model.git</connection>
-		<developerConnection>scm:git:ssh://github.com:shopizer-ecommerce/shopizer-sm-core-model.git</developerConnection>
-		<url>https://github.com/shopizer-ecommerce/shopizer-sm-core-model</url>
+		<connection>scm:git:git://github.com/gauraw10/shopping_ecomm.git</connection>
+		<developerConnection>scm:git:ssh://github.com/gauraw10/shopping_ecomm.git</developerConnection>
+		<url>https://github.com/gauraw10/shopping_ecomm.git</url>
 	</scm>
 
 </project>
