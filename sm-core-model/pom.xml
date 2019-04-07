@@ -193,7 +193,7 @@
 		</plugins>
 	</build>
 
-	<distributionManagement>
+	<!--distributionManagement>
 		<snapshotRepository>
 			<id>ossrh</id>
 			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
@@ -202,7 +202,7 @@
 			<id>ossrh</id>
 			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
 		</repository>
-	</distributionManagement>
+	</distributionManagement -->
 
 	<scm>
 		<connection>scm:git:git://github.com/gauraw10/shopping_ecomm.git</connection>
