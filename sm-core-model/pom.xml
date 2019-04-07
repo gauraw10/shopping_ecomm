@@ -202,12 +202,12 @@
 			<id>ossrh</id>
 			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
 		</repository>
-	</distributionManagement -->
+	</distributionManagement 
 
 	<scm>
 		<connection>scm:git:git://github.com/gauraw10/shopping_ecomm.git</connection>
 		<developerConnection>scm:git:ssh://github.com/gauraw10/shopping_ecomm.git</developerConnection>
-		<url>https://github.com/gauraw10/shopping_ecomm.git</url>
-	</scm>
+		<url>https://github.com/gauraw10/shopping_ecomm.git</url> 
+	</scm> -->
 
 </project>
