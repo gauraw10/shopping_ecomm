@@ -166,6 +166,6 @@
 		<connection>scm:git:git://github.com/gauraw10/shopping_ecomm.git</connection>
 		<developerConnection>scm:git:ssh://github.com/gauraw10/shopping_ecomm.git</developerConnection>
 		<url>https://github.com/gauraw10/shopping_ecomm/shopizer-sm-core-modules</url>
-	</scm>
+	</scm -->
 
 </project>
