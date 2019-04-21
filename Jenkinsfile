@@ -6,6 +6,7 @@ pipeline {
     ORG = 'root'
     APP_NAME = 'shopizer-ecomm'
     CHARTMUSEUM_CREDS = credentials('jenkins-x-chartmuseum')
+    DOCKER_REGISTRY = '10.59.253.95:5000'
   }
   stages {
     stage('CI Build and push snapshot') {
