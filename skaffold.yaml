@@ -7,8 +7,7 @@ build:
     docker: {}
   tagPolicy:
     envTemplate:
-     #template: '{{.DOCKER_REGISTRY}}/root/shopizer-ecomm:{{.VERSION}}'
-      template: '10.59.253.95:5000/root/shopizer-ecomm:{{.VERSION}}'
+     template: '{{.DOCKER_REGISTRY}}/root/shopizer-ecomm:{{.VERSION}}'
   local: {}
 deploy:
   kubectl: {}
@@ -19,7 +18,7 @@ profiles:
     - docker: {}
     tagPolicy:
       envTemplate:
-        template: '10.59.253.95:5000/root/shopizer-ecomm:{{.DIGEST_HEX}}'
+        template: '{{.DOCKER_REGISTRY}}/root/shopizer-ecomm:{{.DIGEST_HEX}}'
     local: {}
   deploy:
     helm:
@@ -27,5 +26,5 @@ profiles:
       - name: shopizer-ecomm
         chartPath: charts/shopizer-ecomm
         setValueTemplates:
-          image.repository: '10.59.253.95:5000/root/shopizer-ecomm'
+          image.repository: '{{.DOCKER_REGISTRY}}/root/shopizer-ecomm'
           image.tag: '{{.DIGEST_HEX}}'
