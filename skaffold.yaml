@@ -7,7 +7,7 @@ build:
     docker: {}
   tagPolicy:
     envTemplate:
-     //template: '{{.DOCKER_REGISTRY}}/root/shopizer-ecomm:{{.VERSION}}'
+     #template: '{{.DOCKER_REGISTRY}}/root/shopizer-ecomm:{{.VERSION}}'
       template: '10.59.253.95:5000/root/shopizer-ecomm:{{.VERSION}}'
   local: {}
 deploy:
