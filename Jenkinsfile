@@ -6,7 +6,6 @@ pipeline {
     ORG = 'root'
     APP_NAME = 'shopizer-ecomm'
     CHARTMUSEUM_CREDS = credentials('jenkins-x-chartmuseum')
-    DOCKER_REGISTRY = '10.59.253.95:5000'
   }
   stages {
     stage('CI Build and push snapshot') {
@@ -14,7 +13,8 @@ pipeline {
         branch 'PR-*'
       }
       environment {
-        PREVIEW_VERSION = "0.0.0-SNAPSHOT-$BRANCH_NAME-$BUILD_NUMBER"
+        PREVIEW_VERSION = "2.4.0"
+	//PREVIEW_VERSION = "0.0.0-SNAPSHOT-$BRANCH_NAME-$BUILD_NUMBER"
         PREVIEW_NAMESPACE = "$APP_NAME-$BRANCH_NAME".toLowerCase()
         HELM_RELEASE = "$PREVIEW_NAMESPACE".toLowerCase()
       }
@@ -24,12 +24,11 @@ pipeline {
           sh "mvn clean install"
           sh "skaffold version"
           sh "export VERSION=$PREVIEW_VERSION && skaffold build -f skaffold.yaml"
-          //sh "jx step post build --image 10.59.253.95:5000/$ORG/$APP_NAME:$PREVIEW_VERSION"
           sh "jx step post build --image $DOCKER_REGISTRY/$ORG/$APP_NAME:$PREVIEW_VERSION"
-          //dir('charts/preview') {
-            //sh "make preview"
-            //sh "jx preview --app $APP_NAME --dir ../.."
-          //}
+          dir('charts/preview') {
+            sh "make preview"
+            sh "jx preview --app $APP_NAME --dir ../.."
+          }
         }
       }
     }
@@ -52,7 +51,6 @@ pipeline {
           sh "mvn -X -e clean deploy"
           sh "skaffold version"
           sh "export VERSION=`cat VERSION` && skaffold build -f skaffold.yaml"
-          //sh "jx step post build --image 10.59.253.95:5000/$ORG/$APP_NAME:\$(cat VERSION)"
           sh "jx step post build --image $DOCKER_REGISTRY/$ORG/$APP_NAME:\$(cat VERSION)"
         }
       }
